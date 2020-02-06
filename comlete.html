@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.jpg">
+    <link rel="stylesheet" href="./CatWorld_files/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link href="./CatWorld_files/css" rel="stylesheet">
+    <title>CatWorld</title>
+  <style>body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style>.styles_header__KI8xt {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: #6200EE;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+
+.styles_link__3KjDQ {
+  height: 78px;
+  display: flex;
+  flex: 0 0 120px;
+  justify-content: center;
+  align-items: center;
+  color: darkslategray;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  transition: border-bottom-color 0.3s;
+  border-bottom: 4px solid transparent; }
+  .styles_link__3KjDQ:hover {
+    border-bottom: 5px solid rgba(250, 109, 106, 0.8);
+    color: #fa6d6a; }
+
+.styles_link__3KjDQ + .styles_link__3KjDQ {
+  border-left: 1px solid rgba(167, 0, 233, 0.1); }
+
+.styles_linkActive__WoPwr {
+  color: #fa6d6a; }
+</style><style>@import url(https://fonts.googleapis.com/css?family=Montserrat);</style><style>.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite  60s linear;
+  height: 40vmin;
+  pointer-events: none;
+
+}
+
+.App-header {
+  /*background-color: #282c34;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+
+.App-link {
+  color: black;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Intro{
+  font-family: 'Lato', sans-serif;
+
+  font-size: 65px;
+  color: #6200EE;
+}
+.Adoption-page{
+  background: #f5f5f5;
+  width: 100%;
+
+}
+.poster_text{
+  color: #dddddd;
+  font-size: 80px;
+  padding-left: 60%;
+  position	: absolute;
+  top		: 200px;
+  left		: 0;
+  width		: 100%;
+}
+.poster_cat::selection{
+  background-color: #a700e9;
+}
+.poster_text2{
+  color: #dddddd;
+  font-size: 60px;
+  padding-left: 60%;
+  position	: absolute;
+  top		: 400px;
+  left		: 0;
+  width		: 100%;
+}
+.poster_cat::selection{
+  background-color: #a700e9;
+}
+.poster_cat{
+  position: relative;
+  width: 100%;
+}
+.list_el{
+ padding : 40px;
+  border-radius: 50%;
+}
+
+.NamesList{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 150px;
+  padding-top: 50px;
+}
+.poster_text3{
+  font-size: 60px;
+  padding-left: 30%;
+  position	: absolute;
+  top		: 600px;
+  left		: 0;
+  width		: 100%;
+}
+
+.example_a {
+  font-size: 20px;
+  align-content: center;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #a700e9;
+  padding: 15px;
+  border-radius: 0px;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+.example_a:hover {
+  background: #eb01a5;
+  letter-spacing: 1px;
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+.button_el{
+  height: 100%;
+  width: 33%;
+  padding: 70px;
+}
+.poster_button{
+display:inline-block;
+padding:0.35em 1.2em;
+border:0.1em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#FFFFFF;
+text-align:center;
+transition: all 0.2s;
+}
+.poster_button:hover{
+color:#000000;
+background-color:#FFFFFF;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: Montserrat;
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  color: #a700e9;
+  size: 80px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+
+}
+.bounceball::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #a700e9;
+  transform-origin: 50%;
+  animation: bounce 500ms alternate infinite ease;
+}
+
+@keyframes bounce {
+  0% {
+    top: 50px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height:15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+.login-window{
+  width: 100%;
+  box-sizing:border-box;
+  background: linear-gradient(#eb01a5, #a700e9);
+}
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h2 {
+  width: 100%;
+  color: white;
+  font-family: 'open sans condensed';
+  font-size: 1.35em;
+  display: block;
+  background:linear-gradient(#eb01a5, #a700e9);
+  width: 100%;
+  text-transform: uppercase;
+  padding: .75em 1em .75em 1.5em;
+//box-shadow:inset 0px 1px 1px fadeout(white, 95%);
+//text-shadow: 0px 1px 1px darken(#2a2a2a, 5%);
+  margin: 0;
+  font-weight: 200;
+}
+input {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: .5em 0;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1.25em;
+  color: #757575;
+}
+input:focus{
+  outline: none;
+}
+.btn {
+  display: inline-block;
+  background: #a700e9;
+  border: 1px solid #a700e9;
+  padding: .5em 2em;
+  color: white;
+  margin-right: .5em;
+}
+.btn:hover {
+   background: #eb01a5;
+ }
+.btn:active {
+   background: #eb01a5;
+ }
+.btn:focus {
+   outline: none;
+ }
+</style><style>.styles_todoList__1MeWB {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.styles_ldsFacebook__3ON75 {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px; }
+
+.styles_ldsFacebook__3ON75 div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #a700e9;
+  animation: styles_ldsFacebook__3ON75 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite; }
+
+.styles_ldsFacebook__3ON75 div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s; }
+
+.styles_ldsFacebook__3ON75 div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s; }
+
+.styles_ldsFacebook__3ON75 div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0; }
+
+@keyframes styles_ldsFacebook__3ON75 {
+  0% {
+    top: 6px;
+    height: 51px; }
+  50%, 100% {
+    top: 19px;
+    height: 26px; } }
+
+.styles_listItemEnter__1OIx8 {
+  opacity: 0;
+  transform-origin: 0 0;
+  max-height: 0; }
+
+.styles_listItemEnterActive__1pEj8 {
+  opacity: 1;
+  max-height: 5rem;
+  transform-origin: 0 0;
+  transition: opacity 300ms, max-height 300ms; }
+
+.styles_listItemExit__3aRVM {
+  opacity: 1;
+  max-height: 5rem;
+  transform-origin: 0 0; }
+
+.styles_listItemExitActive__tWMLQ {
+  opacity: 0;
+  transform-origin: 0 0;
+  max-height: 0;
+  transition: opacity 300ms, max-height 300ms; }
+</style><style></style><style></style><style>.styles_NamesList__3LS8B {
+  padding-left: 150px;
+  padding-top: 200px; }
+
+h1 {
+  padding-top: 15px;
+  color: #a700e9; }
+</style><style>@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);</style><style>* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'open sans', helvetica, arial, sans;
+  background: url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.styles_log-form__1jCfR {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); }
+  @media (max-width: 40em) {
+    .styles_log-form__1jCfR {
+      width: 95%;
+      position: relative;
+      margin: 2.5% auto 0 auto;
+      left: 0%;
+      transform: translate(0%, 0%); } }
+  .styles_log-form__1jCfR form {
+    display: block;
+    width: 100%;
+    padding: 2em; }
+  .styles_log-form__1jCfR h2 {
+    width: 100%;
+    color: #5d5d5d;
+    font-family: 'open sans condensed';
+    font-size: 1.35em;
+    display: block;
+    background: #2a2a2a;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .75em 1em .75em 1.5em;
+    border: 1px solid #1d1d1d;
+    margin: 0;
+    font-weight: 200; }
+  .styles_log-form__1jCfR input {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: .5em 0;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1.25em;
+    color: #757575; }
+    .styles_log-form__1jCfR input:focus {
+      outline: none; }
+  .styles_log-form__1jCfR .styles_btn__3893e {
+    display: inline-block;
+    background: #1fb5bf;
+    border: 1px solid #1ba0a9;
+    padding: .5em 2em;
+    color: white;
+    margin-right: .5em; }
+    .styles_log-form__1jCfR .styles_btn__3893e:hover {
+      background: #23cad5; }
+    .styles_log-form__1jCfR .styles_btn__3893e:active {
+      background: #1fb5bf; }
+    .styles_log-form__1jCfR .styles_btn__3893e:focus {
+      outline: none; }
+  .styles_log-form__1jCfR .styles_forgot__3hJjA {
+    color: #33d3de;
+    line-height: .5em;
+    position: relative;
+    top: 2.5em;
+    text-decoration: none;
+    font-size: .75em;
+    margin: 0;
+    padding: 0;
+    float: right; }
+    .styles_log-form__1jCfR .styles_forgot__3hJjA:hover {
+      color: #1ba0a9; }
+</style><style type="text/css">* {
+ text-shadow: transparent 0px 0px 0px, rgba(0,0,0,0.68) 0px 0px 0px !important; 
+}</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><div class="styles_header__KI8xt"><a aria-current="page" class="styles_link__3KjDQ styles_linkActive__WoPwr" href="http://localhost:3000/">Home</a><a class="styles_link__3KjDQ" href="http://localhost:3000/names/">Cat Names</a><a class="styles_link__3KjDQ" href="http://localhost:3000/mycat/">My Cat</a></div><div><div class="App"><header class="App-header"><div class="poster"><img src="./CatWorld_files/flower_cat.b6c61d3f.jpg" class="poster_cat" alt="image of cat"><p class="poster_text">ADOPT US. </p><p class="poster_text2">WE NEED YOUR HELP.</p></div><p class="Intro">Cats Available for Adoption</p><div class="Adoption-page"><div class="List_of_cats"><span align="center"><img class="list_el" src="./CatWorld_files/c1.921f5917.jpg"></span><span align="center"><img class="list_el" src="./CatWorld_files/c2.81590877.jpg"></span><span align="center"><img class="list_el" src="./CatWorld_files/c3.db36ed9d.jpg"></span></div><div class="List_of_cats"><span align="center" class="button_el"><a class="example_a" align="center" href="http://localhost:3000/mycat" target="_blank" rel="nofollow noopener">Fill adoption form</a></span><span align="center" class="button_el"><a class="example_a" href="http://localhost:3000/mycat" target="_blank" rel="nofollow noopener">Fill adoption form</a></span><span align="center" class="button_el"><a class="example_a" href="http://localhost:3000/mycat" target="_blank" rel="nofollow noopener">Fill adoption form</a></span></div><img src="./CatWorld_files/cats.1a635a37.jpg" alt="image of cat"></div></header></div></div></div></div>
+  <script src="./CatWorld_files/bundle.js"></script><script src="./CatWorld_files/0.chunk.js"></script><script src="./CatWorld_files/main.chunk.js"></script><script src="./CatWorld_files/main.1973c6cdd23bb1023708.hot-update.js"></script>
+
+</body></html>
