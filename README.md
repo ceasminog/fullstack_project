@@ -1,1 +1,2 @@
-# fullstack_project
+# fullstack project
+Код по фронту в папке front, аналогично бэк в back. Для более удобной проверки фронта есть complete.html, которая получится, если собрать проект. 
